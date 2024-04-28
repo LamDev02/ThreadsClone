@@ -40,7 +40,7 @@ const UserPage = () => {
   if (!user && loading) {
     return (
       <Flex justifyContent={"center"}>
-        <Spinner size={"xl"} />;
+        <Spinner size={"xl"} />
       </Flex>
     );
   }
