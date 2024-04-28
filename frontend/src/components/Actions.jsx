@@ -63,13 +63,14 @@ const Actions = ({ post }) => {
       } else {
         // remove the id of the current user from post.likes array
         const updatedPosts = posts.map((p) => {
-          if (p._id === post.id) {
+          if (p._id === post._id) {
             return { ...p, likes: p.likes.filter((id) => id !== user._id) };
           }
           return p;
         });
         setPosts(updatedPosts);
       }
+      console.log(data);
 
       setLiked(!liked);
     } catch (error) {
